@@ -6,7 +6,7 @@ export default function Navbar() {
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div class="container">
           <a class="navbar-brand fw-bold fs-4" href="#">
-            ECOMMERCE STORE
+            DELULU STORE
           </a>
           <button
             class="navbar-toggler"
