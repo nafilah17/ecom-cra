@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
+import { Link } from "react-router-dom";
+
 
 export default function Products() {
   const [data, setData] = useState([]);
@@ -27,6 +29,15 @@ export default function Products() {
   const Loading = () => {
     return (
       <>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350} />
+        </div>
         <div className="col-md-3">
           <Skeleton height={350} />
         </div>
@@ -66,9 +77,9 @@ export default function Products() {
                       {product.title.substring(0, 12)}
                     </h5>
                     <p class="card-text lead fw-bold">${product.price}</p>
-                    <a href="#" class="btn btn-outline-dark">
+                    <Link to={`/products/${product.id}`} class="btn btn-outline-dark">
                       Buy
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
